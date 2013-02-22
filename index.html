@@ -47,42 +47,54 @@
         </section>
 
         <section>
-          <img style="background-color:transparent; border: 0px solid;" src="DM_Primary_RGB_Rev_Yellow.png" />
+          <img style="background-color:transparent; border: 0px solid; box-shadow: none;" src="DM_Primary_RGB_Rev_Yellow.png" />
         </section>
 
         <section>
           <h2>Background</h2>
           <ul>
             <li>Always been in Ops or Support</li>
-            <li>Until recently, never really worked closely with developers</li>
-            <li>I have been doing Puppet since 2008</li>
-            <li>First looked at testing modules about a year ago</li>
+            <li>Until recently, I have never really worked closely with developers</li>
+            <li>I have been doing Puppet since 2008 (v 0.24.7)</li>
+            <li>First looked at testing Puppet modules about a year ago</li>
           </ul>
         </section>
 
-
         <section>
-          <h1>Testing</h1>
+          <h1>Why Testing?</h1>
         </section>
 
         <section>
-          <h2>Why It Didn't Go Anywhere?</h2>
+          <h2>What I Thought?</h2>
+          <ul>
+            <li>Help catch mistakes</li>
+            <li>Test that things work</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why Didn't I Start Writing Tests Regularly?</h2>
           <ul>
             <li>I was basically reimplementing my manifests in rspec</li>
             <li>No guidance on what to test and why to test</li>
             <li>Wait a sec, you mean it doesn't actually test if it works?</li>
+            <li>Didn't understand the types of tests</li>
           </ul>
         </section>
 
         <section>
-          <h2>What Changed?</h2>
+          <h2>So Then Why Are We Here?</h2>
           <ul>
             <li>Testing configuration beyond just the manifests</li>
             <li>Manifests are getting more complicated</li>
             <li>Knowing that integration testing is coming</li>
+            <li>Makes writing Puppet code more fun</li>
           </ul>
         </section>
 
+        <section>
+          <h1>What is Testing?</h1>
+        </section>
 
         <section>
           <h2>Types of Tests</h2>
@@ -91,6 +103,14 @@
             <li>Linting</li>
             <li>Unit Tests</li>
             <li>Integration Tests</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Syntax Checking</h2>
+          <ul>
+            <li>Something a lot of us have done for a while</li>
+            <li>Important, but doesn't do much</li>
           </ul>
         </section>
 
@@ -104,18 +124,10 @@
         </section>
 
         <section>
-          <h2>Syntax Checking</h2>
-          <ul>
-            <li>Something a lot of us have done for a while</li>
-            <li>Important, but doesn't do much</li>
-          </ul>
-        </section>
-
-        <section>
           <h2>Unit Tests</h2>
           <ul>
             <li>rspec-puppet</li>
-            <li>multiple tools in Chef</li>
+            <li>Multiple tools in Chef</li>
             <li>Test the code returns the things that are expected</li>
             <li>In Puppet, testing the catalog</li>
             <li>Get syntax checking for free</li>
@@ -159,7 +171,8 @@
         <section>
           <h2>Important Config Elements</h2>
           <ul>
-            <li>Is the Include directive in the apache config, how about that Rewrite rule?</li>
+            <li>Is the Include directive in the apache config?</li>
+            <li>How about that Rewrite rule?</li>
             <li>Are the search domains in the right order?</li>
             <li>Are we setting the right options for SOLR?</li>
           </ul>
@@ -174,14 +187,6 @@
         </section>
 
         <section>
-          <h2>Show me on the doll where the config touched you...</h2>
-          <ul>
-            <li>A place to document those silly config changes and test them</li>
-            <li>Make sure the same mistake doesn't happen twice</li>
-          </ul>
-        </section>
-
-        <section>
           <h2>Environment Differences</h2>
           <ul>
             <li>Is caching on in prod but off in dev?</li>
@@ -190,9 +195,17 @@
         </section>
 
         <section>
-          <h2>Next Steps</h2>
+          <h2>Show me on the doll where the config touched you...</h2>
           <ul>
-            <li>Automation via CI</li>
+            <li>A place to document those silly config changes and test them</li>
+            <li>Make sure the same mistake doesn't happen twice</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Next Steps</h1>
+          <ul>
+            <li>Automation via Continuous Integration</li>
             <li>Integration testing (Test Kitchen)</li>
             <li>Nagios/Monitoring Integration</li>
           </ul>
@@ -200,8 +213,25 @@
 
         <section>
           <h1>Questions?</h1>
-          <h3>Slides:</h3>
-          <h4><a href="http://cwebberops.github.com/scale11x-tdd_for_ops">http://cwebberops.github.com/scale11x-tdd_for_ops</a></h4>
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <h3>Talks</h3>
+          <ul>
+            <li><a href="http://cwebberops.github.com/scale11x-tdd_for_ops">http://cwebberops.github.com/scale11x-tdd_for_ops</a></li>
+            <li><a href="http://www.youtube.com/watch?v=hHcJ0NUIGSI&list=PLV86BgbREluVFB73Wwqp_tCbw5Z9TMLX1&index=19">Red, Green, Re-provision: Test Driving Operations - R. Tyler Croy</a></li>
+          </ul>
+          <h3>Puppet</h3>
+          <ul>
+            <li><a href="http://puppet-lint.com">http://puppet-lint.com</a></li>
+            <li><a href="http://rspec-puppet.com">http://rspec-puppet.com</a></li>
+          </ul>
+          <h3>Chef</h3>
+          <ul>
+            <li><a href="https://github.com/opscode/test-kitchen">https://github.com/opscode/test-kitchen</a></li>
+            <li><a href="https://github.com/calavera/rspec-chef">https://github.com/calavera/rspec-chef</a></li>
+          </ul>
         </section>
 
 
@@ -223,7 +253,7 @@
 				center: true,
 
 				theme: 'night', // available themes are in /css/theme
-				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
